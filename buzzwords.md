@@ -1,0 +1,22 @@
+- Redis
+- Load Balancing
+- Nginx
+- Signle process (not fully utilized) 
+- uwsgi, gunicorn
+- multithreaded (and multiprocess)
+- jmeter
+- timeout
+- caching
+- lazyness (vs caching?)
+- throw more money at the problem
+- HAProxy, ELB, Nginx
+- througput (req/s)
+- avg response time
+- Load Balancing - pushing the problem down the stack
+- Varnish - you will never be able to run Django that fast
+- Your own time is a valuable resource, more precious than CPU time
+- django-debug-toolbar
+- Database optimization
+- Persistent Connections - `CONN_MAX_AGE`
+- Template performance - `block` faster than `include`
+- Database design
