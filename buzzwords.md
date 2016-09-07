@@ -1,10 +1,12 @@
 - Redis
 - Load Balancing
 - Nginx
-- Signle process (not fully utilized) 
+- Signle process (not fully utilized)
 - uwsgi, gunicorn
 - multithreaded (and multiprocess)
 - jmeter
+- siege
+- Apache Benchmark
 - timeout
 - caching
 - lazyness (vs caching?)
@@ -20,3 +22,5 @@
 - Persistent Connections - `CONN_MAX_AGE`
 - Template performance - `block` faster than `include`
 - Database design
+- tradeoff
+- accidental complexity
