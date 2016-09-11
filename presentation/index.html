@@ -2,6 +2,7 @@
   <head>
     <link rel="stylesheet" href="css/reveal.css">
     <link rel="stylesheet" href="css/theme/white.css" id="theme">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/styles/default.min.css">
     <meta charset="utf-8" />
   </head>
   <body>
@@ -92,6 +93,10 @@
         </section>
 
         <section>
+          Спонтанната оптимизация води до спонтанни резултати.
+        </section>
+
+        <section>
           <h1>Не предполагай</h1>
           <ul>
             <li>Django Debug Toolbar</li>
@@ -101,11 +106,47 @@
         </section>
 
         <section>
+          Познавай ORM-a
+        </section>
+
+        <section>
+          <pre>
+            <code class="python">
+class Author(models.Model):
+    name = CharField()
+
+class Book(models.Model):
+    title = CharField()
+    author = ForeignKey(Author)
+            </code>
+          </pre>
+        </section>
+
+        <section>
+          <pre><code class="django">
+{% for book in books %}
+    {{ book.author.name }} // отделна заявка на всяка итерация
+{% endfor %}
+          </code></pre>
+        </section>
+
+        <section>
+          <pre><code class="python">
+Book.objects.select_related('author').all()
+Author.objects.prefetch_related('book_set').all()
+          </code></pre>
+        </section>
+
+        <section>
+          Кеширай - колкото се може повече
+        </section>
+
+        <section>
 
         </section>
 
         <section>
-          Не решавайте проблеми, които нямате.
+          Не решавай проблеми, които нямаш.
         </section>
 
         <section>
@@ -123,8 +164,19 @@
       </div>
     </div>
     <script src="js/reveal.js"></script>
+    <script src="lib/js/head.min.js"></script>
     <script>
-      Reveal.initialize();
+      Reveal.initialize({
+        dependencies: [
+          {
+            src: 'plugin/highlight/highlight.js',
+            async: true,
+            callback: function() {
+              hljs.initHighlightingOnLoad();
+            }
+          },
+        ]
+      });
     </script>
   </body>
 </html>
