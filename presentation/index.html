@@ -41,6 +41,10 @@
         </section>
 
         <section>
+          Може да се оптимизира само това, което може да се измери.
+        </section>
+
+        <section>
           <ul>
             <li>Универсална оптимизация няма</li>
             <li>Напълно оптимална система няма</li>
@@ -98,6 +102,10 @@
 
         <section>
           <h1>Не предполагай</h1>
+        </section>
+
+        <section>
+          Profile first:
           <ul>
             <li>Django Debug Toolbar</li>
             <li>django-silk</li>
@@ -162,6 +170,20 @@ len(books)  # по-бавно
         </section>
 
         <section>
+          Добавяй индекси:
+          <pre><code class="python">
+class Book(models.Model):
+    title = CharField(db_index=True)
+    author = ForeignKey(Author)
+          </code></pre>
+          Ускоряват четенето: filter(), exclude(), order_by()
+        </section>
+
+        <section>
+          Не добавяй индекси. Забавят писането.
+        </section>
+
+        <section>
           Кеширай - колкото се може повече
         </section>
 
@@ -174,7 +196,7 @@ len(books)  # по-бавно
         </section>
 
         <section>
-          Заобичайте Django документацията:<br>
+          Заобичай Django документацията:<br>
           <ul>
             <li>Performance and Optimization: http://docs.djangoproject.com/en/1.10/topics/performance/</li>
             <li>Database access optimization: https://docs.djangoproject.com/en/1.10/topics/db/optimization/</li>
