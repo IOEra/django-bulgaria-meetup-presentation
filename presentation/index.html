@@ -196,7 +196,25 @@ class Book(models.Model):
         </section>
 
         <section>
-          Кеширай - колкото се може повече
+          <h1>Caching</h1>
+        </section>
+
+        <section>
+          <h1>Кеширай - колкото се може повече</h1>
+          <ul>
+            <li>Мемоизирай - (django.utils.lru_cache)</li>
+            <li>Кеширай QuerySet - (django-cacheops, django-cache-machine)</li>
+            <li>Кеширай темплейтите</li>
+            <li>Кеширай целия HTML Response (Varnish, Squid, nginx)</li>
+          </ul>
+        </section>
+
+        <section>
+          <h1>Не кеширай</h1>
+          <blockquote>
+There are only two hard things in Computer Science: cache invalidation and naming things.
+-- Phil Karlton
+          </blockquote>
         </section>
 
         <section>
