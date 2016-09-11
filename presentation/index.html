@@ -138,11 +138,35 @@ Author.objects.prefetch_related('book_set').all()
         </section>
 
         <section>
+          Използвай .count()
+          <pre><code class="python">
+books = Book.objects.all()
+books.count()  # бързо
+len(books)  # по-бавно
+{{ books|length }}  # още по-бавно
+          </code></pre>
+        </section>
+
+        <section>
+          Не използвай .count()
+          <pre><code class="django">
+{% if books %}
+  <p>Number of books: {{ books|length }}</p>
+  <ul>
+  {% for book in books %}
+    <li>{{ book.title }}</li>
+  {% endfor %}
+  </ul>
+{% endif %}
+          </code></pre>
+        </section>
+
+        <section>
           Кеширай - колкото се може повече
         </section>
 
         <section>
-
+          Не вярвай на дефинитивни твърдения
         </section>
 
         <section>
