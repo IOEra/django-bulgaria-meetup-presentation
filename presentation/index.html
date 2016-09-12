@@ -256,13 +256,14 @@ There are only two hard things in Computer Science: cache invalidation and namin
           <pre><code class="django">
 {% load compress %}
 {% compress css %}
-<link href="{% static 'css/main.css' %}" rel="stylesheet" type="text/css"/>
+<link href="{% static 'css/main.css' %}"/>
 {% endcompress %}
           </code></pre>
         </section>
 
         <section>
           <h1>Не използвай Django-Compressor</h1>
+          <pre><code class="django">
 {% load compress %}
 {% compress js %}
 // Ще мине development
@@ -270,6 +271,7 @@ There are only two hard things in Computer Science: cache invalidation and namin
 // ... на production - 500 (при offline compression mode)
 var someVariable = {{ some_variable|safe }};
 {% endcompress %}
+          </code></pre>
         </section>
 
         <section>
