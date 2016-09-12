@@ -133,7 +133,7 @@
         </section>
 
         <section>
-          Познавай ORM-a
+          <h1>Познавай ORM-a</h1>
         </section>
 
         <section>
@@ -196,6 +196,19 @@ class Book(models.Model):
     author = ForeignKey(Author)
           </code></pre>
           Ускоряват четенето: filter(), exclude(), order_by()
+        </section>
+
+        <section>
+          <h1>Сортирането не е безплатно</h1>
+          <pre><code class="python">
+class Book:
+    ...
+    class Meta:
+        ordering = ['title']
+
+Book.objects.all()
+Book.objects.all().order_by()  # премахва сортирането на QuerySet-a
+          </code></pre>
         </section>
 
         <section>
