@@ -1,0 +1,8 @@
+Django==1.9
+django-debug-toolbar==1.5
+fake-factory==0.6.0
+ipaddress==1.0.17
+pkg-resources==0.0.0
+python-dateutil==2.5.3
+six==1.10.0
+sqlparse==0.2.1
