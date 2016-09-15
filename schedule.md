@@ -1,3 +1,0 @@
-- Experience learned (deployed projects, etc.)
-- What are you optimizing for?
-- Live demo?
